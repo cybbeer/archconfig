@@ -1,0 +1,34 @@
+{
+  "version": "3.0.11",
+  "keyboard_layout": "us",
+  "mirror-region": "Worldwide",
+  "locale": "en_US.UTF-8",
+  "timezone": "Europe/Amsterdam",
+  "bootloader": "grub-install",
+  "hostname": "archraid",
+  "root-password": "1234",
+  "disk_config": {
+    "partitions": [
+      {
+        "device": "/dev/md0",
+        "mountpoint": "/",
+        "format": false
+      },
+      {
+        "device": "/dev/md1",
+        "mountpoint": "/boot",
+        "format": false
+      }
+    ]
+  },
+  "packages": [
+    "base",
+    "linux",
+    "linux-firmware",
+    "mdadm",
+    "efibootmgr",
+    "grub"
+  ],
+  "services": ["systemd-networkd", "systemd-resolved"],
+  "kernels": ["linux"]
+}
